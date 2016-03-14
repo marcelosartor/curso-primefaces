@@ -1,0 +1,33 @@
+# Maven
+target/
+target/*
+target/**/*
+target/.gitignore     
+target/maven-archiver/
+src/main/webapp/WEB-INF/relatorio
+src/main/webapp/WEB-INF/relatorio/*
+
+
+# Arquivos
+.gitignore     
+ArquivoDeEstiloPadrao.jrtx
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.bak
+*.class
+
+# Mobile Tools for Java (J2ME)
+#.mtj.tmp/
+
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+#hs_err_pid*
+
+
+.settings/org.hibernate.eclipse.console.prefs
+nb-configuration.xml
+target/.gitignore
+target/m2e-wtp/web-resources/.gitignore

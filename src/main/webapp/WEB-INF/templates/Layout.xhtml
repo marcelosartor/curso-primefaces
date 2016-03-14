@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" >
+		
+
+<h:head>
+	<f:facet name="first">
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	</f:facet>
+	<title>Alvorada2</title>
+	
+	<h:outputStylesheet library="alvorada" 	 name="styles/custom.css" />
+	<h:outputStylesheet library="alvorada" 	 name="styles/layout.css" />	
+	<h:outputStylesheet library="alvorada" 	 name="styles/components.css" />
+	
+
+	<h:outputScript target="body" library="primefaces" name="jquery/jquery.js"/>
+	
+	<h:outputScript target="body" library="alvorada" name="javascripts/app.js"/>
+</h:head>
+
+<h:body>
+	
+	<h:form id="fPrincipal" >
+		<header class="ms-topbar">
+			<h:graphicImage library="alvorada" name="images/logo.png" />
+		
+			<a href="#" class="ms-toggle js-toggle"><i class="fa fa-fw fa-bars"></i></a>
+		</header>
+	
+		<aside class="ms-sidebar js-sidebar">
+			<ui:insert name="sidebar"/>
+		</aside>
+		
+		<section class="ms-content js-content">
+			<ui:insert name="content"/>
+		</section>
+		
+			
+		<footer class="ms-bottombar">
+		
+			<p:commandLink id="fechar"  
+	               action="#{sessionMB.fecharSessao()}" 
+	               class="ms-close" 
+	               style="text-decoration:none"
+	               process="@this">
+	                 
+				   <i class="fa fa-fw fa-close"></i>
+				   sair
+			</p:commandLink>
+			<h:outputLabel class="ms-close" value=" - #{sessionMB.usuario}" />
+			
+			<h:outputLabel class="ms-componentes-rodape" value="Versão : #{sessionMB.versao}"  />	
+		</footer>
+		
+		<aside style="z-index: 9999;">
+			<ui:insert name="dialog"/>
+		</aside>
+		
+	</h:form>
+	
+</h:body>
+
+</html>

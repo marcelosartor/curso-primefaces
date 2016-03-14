@@ -1,0 +1,86 @@
+/* Versao */
+.ms-componentes-rodape{
+	float: right;
+	line-height:30px;
+	margin-right: 15px;
+	color: #ffffff;
+}
+
+/* CLOSE */
+.ms-close{
+	float: left;
+	line-height:30px;
+	margin-left: 15px;
+	color: #ffffff;
+}
+
+
+/* TOGGLE */
+.ms-toggle{
+	float: right;
+	line-height:50px;
+	margin-right: 15px;
+	color: #ffffff;
+}
+
+/* MENU */
+.ms-menu{
+	font-size: 1.5em;
+}
+
+.ms-menu > ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	
+}
+
+.ms-menu > ul a {
+	display: block;
+	padding: 10px 15px;
+	
+	text-decoration: none;
+	font-weight: 500;
+	color : #373737;
+}
+
+.ms-menu > ul i {
+	margin-right: 6px;
+} 
+
+.ms-menu > ul a:hover, .ms-menu > ul a:focus{
+	background-color: #dfdfdf;
+}
+
+.ms-menu > ul .is-selected{
+	border-left: 3px solid #1e94d2;
+	background-color: #f3f3f3;
+}
+
+.ms-menu > ul .is-selected a {
+	color: #1e94d2;
+	margin-left: -3px;
+}
+
+/* PAGE-TITLE */
+.ms-page-title{
+	margin: 0;
+	padding: 20px 0;
+	font-size: 1.5em;
+ 	color: #373737;	
+}
+
+/*GRAPHICIMAGE*/
+.ms-graphicImage-centralizado{
+	higth:30%;
+	width:30%;
+	position: relative;
+	left: 35%
+	 
+}
+
+
+
+
+
+

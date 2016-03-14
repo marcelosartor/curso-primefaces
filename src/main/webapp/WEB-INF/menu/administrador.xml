@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MENUPRINCIPAL>
+	<SENHA>darwin</SENHA>
+	<MENU>
+		<GRUPO>
+			<NOME>CADASTRO CCO</NOME>
+				<ITENS>
+					<ITEM>
+						<NOME>Linhas</NOME>
+						<ICONE>fa fa-group</ICONE>
+						<PROGRAMA>crudLinha.xhtml</PROGRAMA>
+					</ITEM>
+					<ITEM>
+						<NOME>Pontos</NOME>
+						<ICONE>fa fa-group</ICONE>
+						<PROGRAMA>crudPontos.xhtml</PROGRAMA>
+					</ITEM>
+					<ITEM>
+						<NOME>Horarios</NOME>
+						<ICONE>fa fa-group</ICONE>
+						<PROGRAMA>crudHorarios.xhtml</PROGRAMA>
+					</ITEM>
+				</ITENS>
+		</GRUPO>
+		<GRUPO>
+			<NOME>CCO</NOME>
+			<ITENS>
+				<ITEM>
+					<NOME>Quadro Dem. das Linhas</NOME>
+					<ICONE>ui-icon-person</ICONE>
+					<PROGRAMA>quadroDemonstrativoDasLinhas.xhtml</PROGRAMA>
+				</ITEM>
+			</ITENS>
+		</GRUPO>
+	</MENU>
+</MENUPRINCIPAL>
+		

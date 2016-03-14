@@ -1,0 +1,63 @@
+body{
+	margin: 0;
+	font-size: 14px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+/*TABVIEW*/
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a{
+	color:#555555;
+}
+
+/*DATATABLE*/
+
+.ms-coluna-td-flag{
+	width: 40px;
+}
+
+.ms-coluna-td-id{
+	width: 100px;
+}
+
+
+@media(max-width:640px){
+	.ms-coluna-td-flag{
+	 	width:none;
+	}
+	
+	.ms-coluna-td-id{
+	 	width:none;
+	}
+	
+}
+/*PANELGRID*/
+
+.ui-panelgrid.ui-widget.ms-panelgrid-noborder div {
+	border:none !important;
+	
+}
+
+.ui-panelgrid.ms-panelgrid-noborder .ui-grid-responsive .ui-grid-row{
+	border:none;
+}
+
+@media(max-width:640px){
+	.ui-tabs.ui-tabs-top > .ui-tabs-nav li{
+	 	width:100%;
+	}
+	
+	.ui-panelgrid.ms-panelgrid-noborder .ui-grid-responsive .ui-grid-row{
+		border:none;
+	}
+
+}
+
+/* CALENDAR */
+.ms-calendar{
+		
+	z-index: 9998;
+}
+
+/* CALENDAR */
+
+	
