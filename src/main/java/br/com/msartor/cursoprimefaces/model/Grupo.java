@@ -2,11 +2,24 @@ package br.com.msartor.cursoprimefaces.model;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="grupo")
 public class Grupo implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue
 	private Long id;
+	@Column(nullable=false,length=150)
 	private String nome;
+	@Column(length=255)
 	private String descricao;
 	
 	/* 

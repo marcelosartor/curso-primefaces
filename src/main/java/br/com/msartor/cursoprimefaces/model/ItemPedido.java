@@ -9,43 +9,40 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="produto")
-public class Produto implements Serializable {
+@Table(name="item_pedido")
+public class ItemPedido implements Serializable {
 
-	
 	private static final long serialVersionUID = 1L;
+	
 	@Id
 	@GeneratedValue
 	private Long id;
 	
-	@Column(nullable=false,length=150)
-	private String nome;
-	@Column(nullable=false,unique=true,length=20)
-	private String sku;
+	@Column(nullable=false,length=3)
+	private Integer quantidade;
 	
-	@Column(name="valor_unitario",nullable=false,precision=10,scale=2)
+	@Column(name="valor_unitrio",nullable=false,precision=10,scale=2)
 	private BigDecimal valorUnitario;
 	
-	@Column(name="quantidade_estoque",nullable=false,length=5)
-	private Integer quantidadeEstoque;
+	@ManyToOne
+	@JoinColumn(name="produto_id",nullable=false)
+	private Produto produto;
 	
 	@ManyToOne
-	@JoinColumn(name = "categoria_id", nullable = false)
-	private Categoria categoria;
-
+	@JoinColumn(name="pedido_id",nullable=false)
+	private Pedido pedido;
+	
 	/*
 	 * Get and Set
 	 */
-	public String getNome() {
-		return nome;
+	public Integer getQuantidade() {
+		return quantidade;
 	}
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setQuantidade(Integer quantidade) {
+		this.quantidade = quantidade;
 	}
 	public BigDecimal getValorUnitario() {
 		return valorUnitario;
@@ -53,34 +50,26 @@ public class Produto implements Serializable {
 	public void setValorUnitario(BigDecimal valorUnitario) {
 		this.valorUnitario = valorUnitario;
 	}
-	public Integer getQuantidadeEstoque() {
-		return quantidadeEstoque;
+	public Produto getProduto() {
+		return produto;
 	}
-	public void setQuantidadeEstoque(Integer quantidadeEstoque) {
-		this.quantidadeEstoque = quantidadeEstoque;
+	public void setProduto(Produto produto) {
+		this.produto = produto;
 	}
 	public Long getId() {
 		return id;
 	}
-	
-	public Categoria getCategoria() {
-		return categoria;
+	public Pedido getPedido() {
+		return pedido;
 	}
 	
-	public void setCategoria(Categoria categoria) {
-		this.categoria = categoria;
+	public void setPedido(Pedido pedido) {
+		this.pedido = pedido;
 	}
 	
-	public String getSku() {
-		return sku;
-	}
-	
-	public void setSku(String sku) {
-		this.sku = sku;
-	}
 	
 	/*
-	 * hashCode and equals
+	 * hashCode and equals. 
 	 */
 	@Override
 	public int hashCode() {
@@ -97,7 +86,7 @@ public class Produto implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Produto other = (Produto) obj;
+		ItemPedido other = (ItemPedido) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
@@ -107,6 +96,6 @@ public class Produto implements Serializable {
 	}
 	
 	
-
 	
+
 }

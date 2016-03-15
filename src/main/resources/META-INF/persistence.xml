@@ -5,6 +5,16 @@
 	<persistence-unit name="CURSO-PRIMEFACES">
 
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		
+		<class>br.com.msartor.cursoprimefaces.model.Cliente</class>
+		<class>br.com.msartor.cursoprimefaces.model.Endereco</class>
+		<class>br.com.msartor.cursoprimefaces.model.Grupo</class>
+		<class>br.com.msartor.cursoprimefaces.model.Usuario</class>
+		<class>br.com.msartor.cursoprimefaces.model.Produto</class>
+		<class>br.com.msartor.cursoprimefaces.model.Categoria</class>
+		<class>br.com.msartor.cursoprimefaces.model.ItemPedido</class>
+		<class>br.com.msartor.cursoprimefaces.model.Pedido</class>
+		<class>br.com.msartor.cursoprimefaces.model.EnderecoEntrega</class>
 
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/curso-primefaces" />
@@ -13,16 +23,22 @@
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
 
 			
+			
 			<property name="hibernate.show_sql" value="true" />
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" />
-			
-			<!-- 
+			<property name="hibernate.hbm2ddl.auto" value="create"/>
+			<property name="hibernate.format_sql" value="true" />
+			<!--
+			 
 			<property name="hibernate.format_sql" value="true" />
 			<property name="javax.persistence.schema-generation.database.action" value="drop-and-create" />
       		<property name="javax.persistence.schema-generation.create-source" value="metadata" />
       		 -->
       		 
 		</properties>
+		
+		
+		
 
 	</persistence-unit>
 </persistence>
