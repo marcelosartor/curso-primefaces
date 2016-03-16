@@ -16,6 +16,7 @@ public class TesteProdutoCategoria {
 		EntityTransaction trx = manager.getTransaction();
 		trx.begin();
 		
+		
 		// instanciamos a categoria pai (Bebidas)
 		Categoria categoriaPai = new Categoria();
 		categoriaPai.setDescricao("Bebidas");

@@ -15,6 +15,7 @@ import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -33,7 +34,7 @@ public class Pedido implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 		
 	@Column(name="data_criacao",nullable=false)
@@ -43,7 +44,7 @@ public class Pedido implements Serializable {
 	@Column(columnDefinition="text")
 	private String observacao;
 	
-	@Column(name="data_entrega")
+	@Column(name="data_entrega",columnDefinition="Date")
 	@Convert(converter=LocalDateConverter.class)
 	private LocalDate dataEntrega;
 	
